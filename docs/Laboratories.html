@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+    body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+.top {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    background: rgb(60 60 60 / 83%);
+    height: 80px;
+    margin-bottom: 30px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+     border: 3px solid rgba(0, 0, 0, 0.3);
+    background: rgb(60 60 60 / 83%);
+    height: 1200px;
+    margin-bottom: 80px;
+}
+.func {
+    border-top: 3px solid rgba(112, 255, 188, 0.3);
+    padding: 5px;
+}
+
+.card {
+            max-width: 700px;
+            width: 99%;
+              background:
+        radial-gradient(
+            circle at top,
+            rgba(70, 180, 255, 0.25),
+            transparent 40%
+        ),
+        linear-gradient(
+            180deg,
+            #081420 0%,
+            #0d2740 50%,
+            #12385f 100%
+        );
+
+     border: 2px solid #4fc3ff;
+
+    box-shadow:
+        0 0 5px rgba(79, 195, 255, 0.8),
+        0 0 15px rgba(79, 195, 255, 0.5),
+        inset 0 0 5px rgba(79, 195, 255, 0.2);
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.2rem;
+            scroll-snap-type: x mandatory;
+            padding: 0.5rem 0.2rem 1.5rem 0.2rem;
+            scrollbar-width: thin;
+            scrollbar-color: grey black;
+        }
+
+        /* for Chrome/Safari */
+        .carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+        .carousel::-webkit-scrollbar-track {
+            background: #e5d9ff;
+            border-radius: 20px;
+        }
+        .carousel::-webkit-scrollbar-thumb {
+            background: #a58bd4;
+            border-radius: 20px;
+        }
+
+        .carousel-item {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            width: 220px;
+            height: 250px;
+            background: #7a62b5;
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 8px 12px grey;
+            border:2px solid black;
+            
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.4rem;
+        }
+
+        .note {
+            margin-top: 1.8rem;
+            color: grey;
+            background:grey;
+            padding: 0.8rem 1.2rem;
+            border-radius: 3rem;
+            font-size: 1rem;
+        }
+.btn {
+    position: relative;
+    overflow: hidden;
+
+    width: 64px;
+    height: 64px;
+
+    border: 2px solid #6f5b2b;
+    border-radius: 8px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* hover */
+.btn:hover {
+    transform: scale(1.08);
+
+    border-color: #d6b25e;
+
+    box-shadow:
+        0 0 8px rgba(214, 178, 94, 0.7),
+        0 0 20px rgba(214, 178, 94, 0.4);
+}
+
+/* shine */
+.btn::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -150%;
+
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.4),
+        transparent
+    );
+
+    transition: left 0.4s ease;
+}
+
+.btn:hover::after {
+    left: 150%;
+}
+
+.btn1 {
+    background-image: url("/img/Vayne_Night_Hunter.png");
+}
+
+.btn2 {
+    background-image: url("/img/Ashe_Frost_Shot.png");
+}
+
+.btn3 {
+    background-image: url("/img/Aphelios_The_Hitman_and_the_Seer.png");
+}
+
+.btn4 {
+    background-image: url("/img/Jhin_Caught_Out.png");
+}
+
+.btn5 {
+    background-image: url("/img/Varus_Living_Vengeance.png");
+}
+
+.btn6 {
+    background-image: url("/img/Jinx_Get_Excited!.png");
+}
+
+
+</style>
+<script>
+        // ===========================================
+        // SAMPLE 2: Function Declaration
+        // ===========================================
+        function sayHello() {
+            let message = "Hello from the function!";
+            alert(message);
+            document.getElementById("output2").innerHTML = message;
+            console.log("Sample 2: Button was clicked!");
+        }
+
+        // ===========================================
+        // SAMPLE 3: Change Text
+        // ===========================================
+        function changeText() {
+            document.getElementById("demo3").innerHTML = "Text changed! Button was clicked at " + new Date().toLocaleTimeString();
+            console.log("Sample 3: Text changed successfully");
+        }
+
+        // ===========================================
+        // SAMPLE 4: Counter (using let)
+        // ===========================================
+        let count = 0;
+        function incrementCounter() {
+            count++;
+            document.getElementById("countDisplay").innerHTML = count;
+            console.log("Sample 4: Count = " + count);
+        }
+
+        // ===========================================
+        // SAMPLE 5: Input Field
+        // ===========================================
+        function greetUser() {
+            let name = document.getElementById("nameInput").value;
+            if (name === "") {
+                name = "Guest";
+            }
+            let message = "Hello, " + name + "!";
+            document.getElementById("greeting").innerHTML = message;
+            console.log("Sample 5: " + message);
+        }
+
+        // ===========================================
+        // SAMPLE 6: If Statement
+        // ===========================================
+        function checkAge() {
+            let age = document.getElementById("ageInput").value;
+            let result;
+            
+            if (age >= 18) {
+                result = "You are an adult! (Age: " + age + ")";
+                console.log("Sample 6: Adult - " + age);
+            } else {
+                result = "You are a minor! (Age: " + age + ")";
+                console.log("Sample 6: Minor - " + age);
+            }
+            
+            document.getElementById("ageResult").innerHTML = result;
+        }
+
+        // ===========================================
+        // SAMPLE 7: Multiple Parameters
+        // ===========================================
+        function addNumbers() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            
+            let result = calculateSum(num1, num2);
+            
+            document.getElementById("sumResult").innerHTML = "Result: " + num1 + " + " + num2 + " = " + result;
+            console.log("Sample 7: " + num1 + " + " + num2 + " = " + result);
+        }
+        
+        function calculateSum(a, b) {
+            return a+b;
+        }
+
+        function sub() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            
+            let result = calculateSub(num1, num2);
+            
+            document.getElementById("sumResult").innerHTML = "Result: " + num1 + " + " + num2 + " = " + result;
+            console.log("Sample 7: " + num1 + " + " + num2 + " = " + result);
+        }
+        
+        function calculateSub(a, b) {
+            return a - b;
+        }
+
+                function mul() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            
+            let result = calculateMul(num1, num2);
+            
+            document.getElementById("sumResult").innerHTML = "Result: " + num1 + " + " + num2 + " = " + result;
+            console.log("Sample 7: " + num1 + " + " + num2 + " = " + result);
+        }
+        
+        function calculateMul(a, b) {
+            return a * b;
+        }
+
+        // ===========================================
+        // SAMPLE 8: Toggle Button (Boolean)
+        // ===========================================
+        let isLightOn = false;
+        function toggleLight() {
+            isLightOn = !isLightOn;
+            
+            let light = document.getElementById("light");
+            
+            if (isLightOn) {
+                light.innerHTML = "Light is ON";
+                light.style.backgroundColor = "yellow";
+                light.style.color = "black";
+                console.log("Light turned ON");
+            } else {
+                light.innerHTML = "Light is OFF";
+                light.style.backgroundColor = "gray";
+                light.style.color = "white";
+                console.log(" Light turned OFF");
+            }
+        }
+
+        // ===========================================
+        // SAMPLE 9: Loop Button
+        // ===========================================
+        function countToFive() {
+            let list = document.getElementById("numberList");
+            list.innerHTML = ""; // Clear list first
+            
+            for (let i = 1; i <= 5; i++) {
+                list.innerHTML += "<li>Number: " + i + "</li>";
+                console.log("Sample 9: Count: " + i);
+            }
+        }
+        
+        function clearList() {
+            document.getElementById("numberList").innerHTML = "";
+            console.log("Sample 9: List cleared");
+        }
+    </script>
+
+</head>
+<body>
+
+
+<div class="top"> <div class="header"><h1>Lab Activities</h1></div></div>
+
+
+<div class="box">
+
+<h1> Javascript function</h1>
+        <div class="func">
+        <h2>function button</h2>
+        <button onclick="sayHello()">click here</button>
+        </div>
+
+        <div class="func">
+        <h2> change text</h2>
+        <p id="demo3">This text will change.</p>
+        <button onclick="changeText()">Click to change text</button>
+        </div>
+    
+        <div class="func">
+        <h2> Increment button</h2>
+        <p>You clicked: <span id="countDisplay">0</span> times</p>
+        <button onclick="incrementCounter()">Click to count</button>
+        </div>
+
+    <div class="func">
+        <h2> Input button</h2>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="greetUser()">Greet Me</button>
+        <div id="greeting"></div>
+    </div>
+
+    <div class="func">
+        <h2> If statement button</h2>
+        <input type="number" id="ageInput" placeholder="Enter your age">
+        <button onclick="checkAge()">Check Age</button>
+        <div  id="ageResult"></div>
+    </div>
+
+    <div class="func">
+        <h2> Multiple parameters (Add Numbers)</h2>
+        <input type="number" id="num1" placeholder="First number">
+        <input type="number" id="num2" placeholder="Second number"> <br>
+        <button onclick="addNumbers()">Add</button>
+        <button onclick="sub()">Subtract</button>
+        <button onclick="mul()">Multiply</button>
+        <div id="sumResult">Result: 0</div>
+    </div>
+
+    <div class="func">
+        <h2> Toggle button </h2>
+        <div id="light" style="background-color: gray; padding: 20px; text-align: center; border-radius: 5px; margin-bottom: 10px;">
+            Light is OFF
+        </div>
+        <button onclick="toggleLight()">Toggle Light</button>
+    </div>
+
+    <div class="func">
+        <h2> Loop button</h2>
+        <button onclick="countToFive()">Count to 5</button>
+        <button onclick="clearList()">Clear List</button>
+        <ul id="numberList" style="background-color: #f9f9f9; padding: 10px; border-radius: 5px;"></ul>
+    </div>
+
+        </div>
+
+<div> <div class="card">
+        <h2 class="header">My Top 6 ADC</h2>
+
+        <!-- === CAROUSEL (only HTML + CSS) === -->
+        <div class="carousel">
+            <!-- slide 1 (using colored divs with emoji – you can replace with <img> ) -->
+            <div class="carousel-item" id="img1"><img src="/img/vayne.jpg"></div>
+            <div class="carousel-item" id="img2"><img src="/img/ashe.jpg"></div>
+            <div class="carousel-item" id="img3"><img src="/img/phel.jpg"></div>
+            <div class="carousel-item" id="img4"><img src="/img/jhin.jpg"></div>
+            <div class="carousel-item" id="img5"><img src="/img/varus.jpg"></div>
+            <div class="carousel-item" id="img6"><img src="/img/jinx.jpg"></div>
+        </div>
+
+        <div class="note">
+            <a href="#img1"><button class="btn btn1"></button></a>
+            <a href="#img2"><button class="btn btn2"></button></a>
+            <a href="#img3"><button class="btn btn3"></button></a>
+            <a href="#img4"><button class="btn btn4"></button></a>
+            <a href="#img5"><button class="btn btn5"></button></a>
+            <a href="#img6"><button class="btn btn6"></button></a>
+        </div>
+
+        <!-- short explanation -->
+        <p style="margin-top: 1.5rem; color:#3c2d66; background:#f3ecff; padding:0.6rem; border-radius:3rem;">
+            
+        </p>
+    </div></div>
+
+
+
+</body>
+
+
+</html>

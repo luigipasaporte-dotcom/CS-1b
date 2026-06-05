@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+    body {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #c0c0c0;
+    border: 1px solid #808080;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d4d0c8;
+}
+
+::-webkit-scrollbar-corner {
+    background: #c0c0c0;
+}
+
+/* Arrow buttons */
+::-webkit-scrollbar-button {
+    display: block;
+    background: #c0c0c0;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    height: 16px;
+}
+
+::-webkit-scrollbar-button:active,
+::-webkit-scrollbar-thumb:active {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+div {
+    margin-bottom: 20px;
+}
+.top {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    background: rgb(60 60 60 / 83%);
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.top img {
+    width: 30%;
+}
+.box {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    background: rgb(60 60 60 / 83%);
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header img {
+    width: 30px;
+}
+.midgrid {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    overflow: hidden;
+}
+.midgrid img {
+    width: 100%;
+}
+.midtxt {
+    text-align: center;
+}
+.collage {
+     column-count: 3;
+    column-gap: 2px;
+}
+.collage img {
+    width:100%;
+}
+</style>
+</head>
+<body>
+<div class="top"><img src="/img/me.jpg"> <br> 
+    
+    <div>
+       <h1>About me</h1>
+        <p>Currently BS Computer Science - 1B at Cavite State University - Silang.
+           I'm 19 years old and lives here in Silang, Cavite. I chose computer Science
+           because I like programming so <br> 
+           much since childhood.</p>
+    </div>
+
+</div>
+<div class="box">
+    <div class="header"><img src="downArrow.gif"><h1>More about me<img src="downArrow.gif"></h1></div>
+<div class="midgrid">
+<div><img src="epstein with a kitty.jpg"></div>
+<div class="midtxt">Psychology was the program I was supposed to enroll but I like programming more.</div>
+<div><img src="/img/dreamy.jpg"></div>
+</div>
+</div>
+
+<div class="box"> <div class="header"> <img src="Music.gif"><h1> Music <img src="Music.gif"></h1></div>
+<div class="collage">
+<img src="/img/radiohead.jpg">
+<img src="/img/Blink 182.jpg">
+<img src="/img/Hatful of Hollow - The Smiths.jpg">
+<img src="/img/tvgirl.jpg">
+<img src="/img/Alice in Chains - Dirt.jpg">
+<img src="/img/smashingpump.jpg">
+<img src="/img/Pantera - 1985 - I Am The Night.jpg">
+<img src="/img/roar.jpg">
+<img src="/img/Am.jpg">
+<img src="/img/oasis.jpg">
+<img src="/img/typeonegative.jpg">
+<img src="/img/mcr.jpg">
+<img src="/img/Faber Drive - _Can't Keep A Secret_ (2009).jpg">
+<img src="/img/i love the cranberries.jpg">
+<img src="/img/redjumpsuit.jpg">
+<img src="/img/alltimelow.jpg">
+<img src="/img/rhcp.jpg">
+<img src="/img/strawS.jpg">
+<img src="/img/idk.jpg">
+<img src="/img/idk.jpg">
+</div>
+</div>
+
+<div class="box"> <div class="header"><h1>Mangas</h1> <img src="/img/dancee.gif" style="width: 50px;"></div>
+<div class="collage">
+<img src="/img/blame.jpg"> 
+<img src="/img/Air Gear Omnibus, Volume 3.jpg"> 
+<img src="/img/deathnote.jpg"> 
+<img src="/img/Dorohedoro - T05 Chaos Edition (05).jpg"> 
+<img src="/img/Shaman King.jpg"> 
+
+</div>
+
+</div>
+</body>
+</html>
+
+
+<!-- <style>
+
+@font-face {
+  font-family: "MyFont";
+  src: url("fonts/Decrepit (BRK) 400.ttf") format("woff2");
+}
+* {
+    outline: 1px solid red;
+}
+    body{
+        margin: 0;
+        font-family: "MyFont";
+        color: azure;
+    }
+.cntr{
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;   
+}
+
+.left {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;
+    
+}
+.temp {
+    height: 150vh;
+    display: grid;
+    grid-template-columns: 1.5fr 5fr 1.5fr;
+}
+.midtxt{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.left1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.left2 {
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.left3 {
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+</style>
+</head>
+<body>
+<div class="cntr">
+    <div class="midtxt"><h1> ABOUT ME </h1></div>
+    <div class="temp">
+    <div class="left">
+            <div class="left2">asd</div>
+            <div class="left3">awdaw</div>
+</div>
+    <div> <img src="womann.png" style="width: 50%;"> </div>
+    <div>c</div>
+    </div>
+</div> -->
